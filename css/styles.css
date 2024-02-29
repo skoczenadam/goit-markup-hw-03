@@ -22,9 +22,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 .container {
   width: 1158px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .section {
@@ -32,7 +37,6 @@ a {
 }
 
 .main-navigation {
-  padding: 24px 0;
   border-bottom: 1px solid #E7E9FC;
 }
 
@@ -43,10 +47,11 @@ a {
 
 .main-nav {
   display: flex;
+  align-items: center;
 }
 
-.first-navi {
-  margin-left: 76px;
+.main-navigation .logo {
+  margin-right: 76px;
 }
 
 .main-list:not(:last-child) {
@@ -61,11 +66,13 @@ a {
   letter-spacing: 0.03em;
   color: #4D5AE5;
   text-transform: uppercase;
+  display: block;
 }
 
 .first-navi,
 .second-navi {
   display: flex;
+  padding: 24px 0;
 }
 
 .first-navi .main-link{
@@ -113,7 +120,7 @@ a {
 }
 
 .main-title {
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   padding-bottom: 48px;
   font-size: 56px;
@@ -122,24 +129,31 @@ a {
 }
 
 .main-button {
+  display: block;
+  min-width: 169px;
   Padding: 16px 32px;
-  text-align: center;
+  margin: 0 auto;
   background-color: #4D5AE5;
   border-radius: 4px;
-  border: 0 solid #4D5AE5;
+  border: none;
   color: #FFF;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
 }
 
-.plan-header {
+.visually-hidden {
   display: none;
 }
 
 .plan-lists {
   display: flex;
   gap: 24px;
+}
+
+.plan-list {
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .text-title {
@@ -173,20 +187,17 @@ a {
 .our-team-list {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
-  width: 264px;
   box-shadow: 0 2px 1px #2E2F4229;
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
-.our-team .text-title,
-.our-portfolio .text-title {
-  margin-top: 32px;
-  text-align: center;
+.our-team-names {
+  padding: 32px 16px;
 }
 
-.our-team .text,
-.our-portfolio .text {
+.our-team-names .text-title,
+.our-team-names .text {
   text-align: center;
-  margin-bottom: 32px;
 }
 
 .our-portfolio-lists {
@@ -197,14 +208,17 @@ a {
 }
 
 .our-portfolio-list {
-  width: 360px;
-  box-shadow: 0 1px 1px 1px #E7E9FC;
+  width: calc((100% - 48px) / 3);
 }
 
-.our-portfolio .text-title,
-.our-portfolio .text {
-  text-align: left;
-  padding-left: 16px;
+.our-portfolio-names {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.our-portfolio-list .text {
+  margin-bottom: 8px;
 }
 
 .info {
@@ -217,7 +231,10 @@ a {
   color: #F4F4FD;
 }
 
+.info .logo {
+  margin-bottom: 16px;
+}
+
 .info-text {
-  margin-top: 16px;
   width: 264px;
 }
